@@ -1,3 +1,4 @@
+//objects.ts
 const person: {
     name: string,
     age: number  //key name and specifying the type of each key
