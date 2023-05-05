@@ -1,14 +1,19 @@
-//unions.ts
-function combine(input1, input2) {
-    //union types allow a variable to handle either of the assigned types
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number') {
-        result = input1 + input2;
+//return_type.ts
+function printResult(n1, n2) {
+    console.log('Result: ' + (n1 + n2));
+    //void return types mean that your function does not return anything
+}
+function subtract(n1, n2) {
+    var diff = n1 - n2;
+    var result = '';
+    if (diff < 0) {
+        result = 'The difference is negative';
     }
     else {
-        result = input1.toString() + input2.toString();
+        result = 'The difference is zero or positive';
     }
+    console.log(diff);
     return result;
 }
-console.log(combine(5, 5));
-console.log(combine('Hello ', 'World'));
+printResult(10, 20);
+console.log(subtract(20, 30));
