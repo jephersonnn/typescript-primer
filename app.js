@@ -1,21 +1,14 @@
-// enums.ts
-var Rules;
-(function (Rules) {
-    Rules[Rules["ADMIN"] = 0] = "ADMIN";
-    Rules[Rules["READ_ONLY"] = 1] = "READ_ONLY";
-    Rules[Rules["AUTHOR"] = 2] = "AUTHOR";
-})(Rules || (Rules = {}));
-; //making a custom type with enums
-var person = {
-    name: 'Jeff',
-    age: 22,
-    hobbies: ['Writing', 'Sleeping'],
-    role: [1, 'author'],
-    rules: Rules.ADMIN
-};
-console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby.toUpperCase());
+//unions.ts
+function combine(input1, input2) {
+    //union types allow a variable to handle either of the assigned types
+    var result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 }
-console.log(person.rules);
+console.log(combine(5, 5));
+console.log(combine('Hello ', 'World'));
