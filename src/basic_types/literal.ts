@@ -25,7 +25,7 @@ function combine(
 //   } else {
 //     return result.toString(); //converts the result to a string if they are not of type string
 //   }
-}
+
 
 console.log(combine(5, 5, 'as-number'));
 console.log(combine("Hello ", "World", 'as-text'));
